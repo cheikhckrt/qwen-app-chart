@@ -1,0 +1,5 @@
+{
+    "name": "example_rule",
+    "description": "This is an example rule",
+    "condition": "some_condition"
+}

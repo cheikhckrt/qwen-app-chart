@@ -1,0 +1,23 @@
+replicaCount: 1
+fullnameOverride: qwen-app
+
+image:
+  repository: cheikhckrt/qwen-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts:
+    - host: qwen-api.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+          port: 80 
+

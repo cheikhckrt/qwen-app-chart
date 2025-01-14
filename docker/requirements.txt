@@ -1,0 +1,4 @@
+flask
+requests
+transformers  # Pour utiliser Qwen
+torch  # Dépendance pour Transformers
